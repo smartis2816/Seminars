@@ -29,7 +29,7 @@ balance = 0
 
 def input_sum():
     global balance
-    if check_wealth() is True:
+    if check_wealth():
         balance = int(balance * 0.9)
     while True:
         operation_sum = int(input(f'\nСумма пополнения и снятия кратны {AMOUNT} у.е. Введите сумму операции: '))
@@ -103,15 +103,21 @@ def check_money():
     print(f'Текущий баланс составляет: {balance}\n')
 
 
-1
+def show_operations():
+    global history_of_operations
+    if len(history_of_operations) != 0:
+        print(*history_of_operations, sep='\n')
+    else:
+        print('История операция пока пустая.')
 
 
 def menu():
-    print("""Доступные действия: 
+    print("""\nДоступные действия: 
     1) пополнить счёт
     2) снять наличные
     3) узнать текущую сумму на счету
-    4) выйти
+    4) посмотреть историю операций
+    5) выйти
     Введите номер желаемого действия. 
     """)
     match input():
@@ -122,6 +128,8 @@ def menu():
         case '3':
             check_money()
         case '4':
+            show_operations()
+        case '5':
             print('Работа банкомата завершается...')
             exit()
 
