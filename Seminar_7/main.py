@@ -9,8 +9,8 @@ import task_4 as t4
 if __name__ == '__main__':
     # t1.fill_numbers(3, 'task_1.txt')
     # t2.gen_names(10, 4, 7, Path('gen_names.txt'))
-    # t3.combine_files('task_1.txt', 'gen_names.txt', 't3_result.txt')
-    t4.gen_files(extension='bin', count_files=5)
+    t3.combine_files('task_1.txt', 'gen_names.txt', 't3_result.txt')
+    # t4.gen_files(extension='bin', count_files=5)
 
 
 
