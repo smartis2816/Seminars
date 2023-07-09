@@ -1,4 +1,3 @@
-
 from sys import argv
 from datetime import datetime
 
@@ -33,6 +32,3 @@ def date_validator(date: str) -> bool:
 
 if __name__ == '__main__':
     date_validator(argv[1])
-
-
-
